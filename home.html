@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Zenith - Luxury Banner</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        :root {
+            --gold: #f3e5ab;
+            --dark-green: #1a3c34;
+            --glass: rgba(0, 0, 0, 0.8);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+        .hero-section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            color: white;
+            padding: 20px 0;
+        }
+
+        /* Swiper Background */
+        .swiper {
+            position: absolute !important;
+            inset: 0;
+            z-index: 1;
+        }
+        .swiper-slide img {
+            width: 100%; height: 100%; object-fit: cover;
+            filter: brightness(0.5);
+        }
+
+        /* Content Container */
+        .container {
+            position: relative;
+            z-index: 10;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 40px;
+            align-items: center;
+        }
+
+        /* Left Side Content & Animations */
+        .hero-content h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--gold);
+            margin-bottom: 15px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .amenities-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .amenities-list li {
+            background: rgba(255, 255, 255, 0.1);
+            margin-bottom: 8px;
+            padding: 12px;
+            border-left: 4px solid var(--gold);
+            backdrop-filter: blur(5px);
+            animation: fadeInLeft 0.8s ease-out both;
+        }
+
+        /* Staggered animation for list items */
+        .amenities-list li:nth-child(1) { animation-delay: 0.2s; }
+        .amenities-list li:nth-child(2) { animation-delay: 0.4s; }
+        .amenities-list li:nth-child(3) { animation-delay: 0.6s; }
+        .amenities-list li:nth-child(4) { animation-delay: 0.8s; }
+
+        /* Form Styling */
+        .form-container {
+            background: var(--glass);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            animation: slideUp 1s ease-out;
+        }
+
+        .form-container h3 { text-align: center; margin-bottom: 20px; color: var(--gold); }
+
+        input {
+            width: 100%; padding: 12px; margin-bottom: 15px;
+            border-radius: 5px; border: none; font-size: 1rem;
+        }
+
+        .submit-btn {
+            width: 100%; padding: 14px; background: var(--gold);
+            font-weight: bold; border: none; border-radius: 5px; cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* Desktop Navigation (Floating Sides) */
+        .swiper-button-next, .swiper-button-prev {
+            color: var(--gold) !important;
+        }
+
+        /* MOBILE RESPONSIVE LOGIC */
+        @media (max-width: 992px) {
+            .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            .amenities-list { max-width: 450px; margin: 20px auto; text-align: left; }
+
+            /* Moving Swiper Buttons below the form */
+            .swiper-button-next, .swiper-button-prev {
+                position: static !important; /* Removes floating */
+                margin: 0 !important;
+                display: flex !important;
+                width: 50px;
+                height: 50px;
+                background: var(--gold);
+                color: black !important;
+                border-radius: 50%;
+            }
+
+            .swiper-button-next::after, .swiper-button-prev::after {
+                font-size: 18px !important;
+                font-weight: bold;
+            }
+
+            /* Container for buttons below form */
+            .mobile-nav-controls {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 25px;
+                animation: fadeIn 1.5s ease-in;
+            }
+        }
+
+        @media (min-width: 993px) {
+            .mobile-nav-controls { display: none; } /* Hide the wrapper on desktop */
+        }
+
+        /* Animations */
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    </style>
+</head>
+<body>
+
+<section class="hero-section">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://i.pinimg.com/1200x/f2/35/ba/f235baae65a1ed53326153850531d7a6.jpg"></div>
+            <div class="swiper-slide"><img src="https://i.pinimg.com/736x/a7/c3/b3/a7c3b385b070a2c1ceb1bdef6f7f0c5c.jpg"></div>
+            <div class="swiper-slide"><img src="https://i.pinimg.com/1200x/f8/d5/f7/f8d5f718603ad31732606a70ea4e8ba6.jpg"></div>
+        </div>
+        
+        <div class="swiper-button-next desktop-only"></div>
+        <div class="swiper-button-prev desktop-only"></div>
+    </div>
+
+    <div class="container">
+        <div class="hero-content">
+            <h1>EXPRESS ZENITH <br> TOWER A</h1>
+            <p style="font-size: 1.2rem;">Premium 3 & 4 BHK Super Luxury Apartments</p>
+            
+            <ul class="amenities-list">
+                <li>✨ 75% Lush Green Open Space</li>
+                <li>🏊 Olympic Size Swimming Pool</li>
+                <li>🛡️ 3-Tier International Standard Security</li>
+                <li>📍 Prime Sector Location, Central Noida</li>
+                <li>🏢 Fully Ventilated Corner Apartments</li>
+            </ul>
+
+            <div style="margin-top: 20px;">
+                <p><strong>Starts @ 2.80 Cr*</strong> | RERA Approved</p>
+            </div>
+        </div>
+
+        <div class="form-wrapper">
+            <div class="form-container">
+                <h3>Get Instant Quote</h3>
+                <form>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email ID" required>
+                    <input type="tel" placeholder="Mobile Number" required>
+                    <div style="background: #fff; padding: 10px; border-radius: 5px; color: #333; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-weight: bold;">4 + 6 =</span>
+                        <input type="number" placeholder="?" style="margin: 0; width: 80px; text-align: center;">
+                    </div>
+                    <button type="submit" class="submit-btn">SUBMIT REQUEST</button>
+                </form>
+            </div>
+
+            <div class="mobile-nav-controls">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        effect: "fade",
+        autoplay: { delay: 4000 },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+</body>
+</html>
