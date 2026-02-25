@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- bootsrap link  -->
     <!-- swiper link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- swiper link  -->
     <!-- animation link  -->
@@ -117,57 +118,69 @@
     <!-- navbar end  -->
 
     <!-- hero section start  -->
-     <div class="relative" id="home">
-            <div class="">
-                
+     <section class="hero-section">
+        <div class="swiper mySwiper mobile-nav-controls">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img
+                        src="images/banner1st.png" alt="Building 1">
+                </div>
+                <div class="swiper-slide"><img
+                        src="images/banner2nd.png" alt="Building 2">
+                </div>
+                <div class="swiper-slide"><img
+                        src="https://i.pinimg.com/736x/d0/6b/8a/d06b8a81fd526c0e02dc4a9ee7918700.jpg" alt="Building 3">
+                </div>
+            </div>
+            <div class="swiper-button-next desktop-only">
+               
+            </div>
+            <div class="swiper-button-prev desktop-only"></div>
+        </div>
 
-                <div id="carousel-example-generic" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
-                    <div class="carousel-inner" role="listbox">
-                              <div class="carousel-item active">
-                                    <img class="d-banner d-none d-md-block w-100" src="https://i.pinimg.com/1200x/f2/35/ba/f235baae65a1ed53326153850531d7a6.jpg" alt="banner">
-                            <img class="m-banner d-block d-md-none w-100" src="https://i.pinimg.com/1200x/f2/35/ba/f235baae65a1ed53326153850531d7a6.jpg" alt="banner">
-                            <!--<img class="d-banner d-none d-md-block w-100" src="image/desktop2.jpg" alt="banner">-->
-                            <!--<img class="m-banner d-block d-md-none w-100" src="image/mobile2.jpg" alt="banner">-->
-                        </div>
-                        
-                         <div class="carousel-item">
-                            <img class="d-banner d-none d-md-block w-100" src="https://i.pinimg.com/1200x/f2/35/ba/f235baae65a1ed53326153850531d7a6.jpg" alt="banner">
-                            <img class="m-banner d-block d-md-none w-100" src="https://i.pinimg.com/1200x/f2/35/ba/f235baae65a1ed53326153850531d7a6.jpg" alt="banner">
-                        </div>
-                        <!--<div class="carousel-item ">-->
-                        <!--    <img class="d-banner d-none d-md-block w-100" src="image/desktop1.jpg" alt="banner">-->
-                        <!--    <img class="m-banner d-block d-md-none w-100" src="image/mobile1.jpg" alt="banner">-->
-                        <!--</div>-->
-<!--                         <div class="carousel-item ">
-                            <img class="d-banner d-none d-md-block w-100" src="image/desktop2.jpg" alt="banner">
-                            <img class="m-banner d-block d-md-none w-100" src="image/mobile2.jpg" alt="banner">
-                        </div> -->
-                       
-                        <!-- <div class="carousel-item">
-                            <img class="d-banner d-none d-md-block w-100" src="images/slider/w2.webp" alt="banner">
-                            <img class="m-banner d-block d-md-none w-100" src="images/slider/m2.webp" alt="banner">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-banner d-none d-md-block w-100" src="images/slider/w3.webp" alt="banner">
-                            <img class="m-banner d-block d-md-none w-100" src="images/slider/m3.webp" alt="banner">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-banner d-none d-md-block w-100" src="images/slider/w4.webp" alt="banner">
-                            <img class="m-banner d-block d-md-none w-100" src="images/slider/m4.webp" alt="banner">
-                        </div> -->
+        <div class="content-wrapper">
+            <div class="left-content">
+                <h1>noida and - TOWER A</h1>
+                <h2>3 & 4 BHK Super Luxury Apartments</h2>
+                <ul class="amenities-list p-0 m-0">
+                <li> <img class="img-fluid me-3" src="images/tickmark (1).png" width="30px" alt="">Price starts @ 2.80 Cr* Onwards</li>
+                <li><img class="img-fluid me-3" src="images/tickmark (1).png" width="30px" alt="">New Launch Project in Center Noida</li>
+                <li><img class="img-fluid me-3" src="images/tickmark (1).png" width="30px" alt=""> 3-Tier International Standard Security</li>
+                <li><img class="img-fluid me-3" src="images/tickmark (1).png" width="30px" alt="">www.up-rera.in</li>
+                <li><img class="img-fluid me-3" src="images/tickmark (1).png" width="30px" alt=""> Fully Ventilated Corner Apartments</li>
+            </ul>
+
+                <div class="btn-container">
+                    <a href="tel:9800330039" class="btn btn-call">Call Now</a>
+                    <a href="#" class="btn btn-brochure">Download Brochure</a>
+                </div>
+            </div>
+
+            <div class="right-form">
+                <h3>Get Quote For 3 & 4 BHK</h3>
+                <form id="leadForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Name" required>
                     </div>
-                 <button class="carousel-control-prev" type="button" data-bs-target="#carousel-example-generic" data-bs-slide="prev">
-                        <img src="image/left.png" alt="">
-                        <!--<span class="">Previous</span>-->
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-example-generic" data-bs-slide="next">
-                        <img src="image/right.png" alt="">
-                        <!--<span class="">Next</span>-->
-                    </button> 
+                    <div class="form-group">
+                        <input type="email" placeholder="Email ID" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Mobile No" required>
+                    </div>
+                    <div class="captcha-box">
+                        <div class="captcha-label">4 + 6 =</div>
+                        <input type="number" placeholder="Please enter Total" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
 
+                <div class="phone-footer">
+                    <p style="margin-bottom: 10px; font-size: 0.8rem; color: #ccc;">OR</p>
+                    <a href="tel:9800330039">📞 987654321011</a>
                 </div>
             </div>
         </div>
+    </section>
 
 
 
@@ -198,7 +211,33 @@
     <!-- bootsrap js link      -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- bootsrap js link      -->
+         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+     <!-- swiper link  -->
     <script src="assets/script.js"></script>
+
+    <!-- hero swiper js start  -->
+     <script>
+         var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            effect: "fade",
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        document.getElementById('leadForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you! Our team will contact you soon.');
+        });
+     </script>
+         <!-- hero swiper js  end -->
+
 </body>
 
 </html>
