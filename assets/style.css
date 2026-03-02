@@ -235,6 +235,22 @@
             font-weight: 700;
             font-size: 21px;
         }
+        @media (max-width: 767px) {
+    .g-heading {
+        /* text-align: center; */
+        margin-top: 1rem;
+    }
+    @media (max-width: 767px) {
+    .g-heading h1 {
+        font-size: 23px;
+    }
+}
+}
+@media (max-width: 767px) {
+    .about-section {
+        padding: 1rem;
+    }
+}
 
         .g-heading .line-img {
             width: 200px !important;
