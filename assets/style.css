@@ -247,6 +247,10 @@
                     font-size: 33px !important;
                 }
             }
+            .g-heading .line-img {
+    width: 160px !important;
+    margin-bottom: 2rem;
+}
         }
 
         @media (max-width: 992px) {
