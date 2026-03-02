@@ -12,209 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
 
-    <style>
-        :root {
-            --green-color: #062625;
-            --gold-color: #f3e5ab;
-            --accent-green: #5eb553;
-        }
-
-        * {
-            font-family: 'Philosopher', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            overflow-x: hidden;
-            background-color: #f4f4f4;
-        }
-
-        /* Navbar Styling */
-        .navbar {
-            background-color: var(--green-color);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            transition: 0.3s;
-        }
-
-        .nav-link {
-            color: #fff !important;
-            font-size: 15px;
-            font-weight: 500;
-            margin: 0 5px;
-        }
-
-        .nav-link:hover {
-            color: var(--accent-green) !important;
-        }
-
-        .call-us-btn {
-            background-color: var(--accent-green);
-            color: #fff !important;
-            padding: 8px 18px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-        }
-
-        /* Hero Section Base */
-        .hero-section {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 90px;
-            padding-bottom: 60px;
-        }
-
-        /* Background Slider Fix */
-        .hero-bg-swiper {
-            position: absolute !important;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .hero-bg-swiper .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.45);
-        }
-
-        /* Swiper Arrows Styling */
-        .swiper-button-next,
-        .swiper-button-prev {
-            color: var(--gold-color) !important;
-            z-index: 100 !important;
-            background: rgba(0, 0, 0, 0.4);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: 1px solid rgba(243, 229, 171, 0.3);
-        }
-
-        .swiper-button-next:after,
-        .swiper-button-prev:after {
-            font-size: 20px !important;
-            font-weight: bold;
-        }
-
-        /* Content & Amenities */
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            color: #fff;
-        }
-
-        .amenities-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .amenities-list li {
-            background: rgba(255, 255, 255, 0.12);
-            margin-bottom: 12px;
-            padding: 14px;
-            border-left: 5px solid var(--gold-color);
-            backdrop-filter: blur(10px);
-            border-radius: 0 10px 10px 0;
-            font-size: 1.15rem;
-            max-width: 580px;
-            display: flex;
-            align-items: center;
-        }
-
-        /* Right Form Styling */
-        .form-card {
-            background: var(--green-color);
-            padding: 35px;
-            border-radius: 15px 50px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            max-width: 420px;
-            margin: 0 auto;
-        }
-
-        .form-card h3 {
-            color: var(--gold-color);
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .form-control {
-            height: 48px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 6px;
-        }
-
-        .captcha-box {
-            background: #fff;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            overflow: hidden;
-        }
-
-        .captcha-label {
-            padding: 0 15px;
-            color: #333;
-            font-weight: bold;
-            border-right: 1px solid #eee;
-            background: #f8f9fa;
-            height: 48px;
-            line-height: 48px;
-        }
-
-        .submit-btn {
-            background: var(--gold-color);
-            color: #000;
-            font-weight: 700;
-            width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 6px;
-            transition: 0.3s;
-        }
-
-        .submit-btn:hover {
-            background: #fff;
-            transform: translateY(-2px);
-        }
-
-        /* Responsiveness Fine-Tuning */
-        @media (max-width: 991px) {
-            .hero-section {
-                text-align: center;
-                padding-top: 110px;
-            }
-
-            .amenities-list li {
-                margin: 10px auto;
-                text-align: left;
-                font-size: 1rem;
-            }
-
-            .hero-content h1 {
-                font-size: 2.2rem;
-            }
-
-            .swiper-button-next,
-            .swiper-button-prev {
-                display: none;
-            }
-
-            /* Hide arrows on mobile for cleaner UI */
-        }
-    </style>
 </head>
 
 <body>
@@ -245,7 +44,9 @@
     <section class="hero-section">
         <div class="swiper hero-bg-swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/banner1st.png" alt="Luxury Interior"></div>
+                <div class="swiper-slide"><img
+                        src="https://i.pinimg.com/1200x/20/99/88/2099889be0f94b47ea70eba498063556.jpg"
+                        alt="Luxury Interior"></div>
                 <div class="swiper-slide"><img src="images/banner2nd.png" alt="Modern Building"></div>
                 <div class="swiper-slide"><img
                         src="https://i.pinimg.com/736x/d0/6b/8a/d06b8a81fd526c0e02dc4a9ee7918700.jpg" alt="Night View">
@@ -256,7 +57,7 @@
         </div>
 
         <div class="container hero-content">
-            <div class="row g-5 align-items-center">
+            <div class="row gy-5 align-items-center">
 
                 <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1200">
                     <h1 class="display-4 fw-bold mb-2 text-uppercase" style="color: var(--gold-color);">Noida Land -
@@ -308,33 +109,204 @@
             </div>
         </div>
     </section>
+    <!-- overview  -->
+    <section class="floor-plan g-s-p" id="overview">
+        <div class="container">
+            <div class="about-section">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 align-self-center">
+                        <div class="g-heading">
+                            <h2>Express Noida - TOWER A</h2>
+                            <h3>3 &amp; 4 BHK Luxury Apartments in Noida</h3>
+                        </div>
+                        <div class="ab-project">
 
+                            <p>
+                                Noida Tower A Sector 00, Noida, is more than just a residential complex – it is a
+                                statement of luxury and sophistication. With its unparalleled design, expert
+                                construction, and world-class amenities, this development promises to redefine modern
+                                living in Noida. Experience the best of both worlds at Noida - TOWER A and
+                                elevate your lifestyle to new heights.
+                            </p>
+                            <p> Noida Tower A, is a thoughtfully planned most premium Stilt + 16 Floors tower. This
+                                brings in an exclusive opportunity to experience uber lifestyle with a peaceful and
+                                enjoyable living. In other words, life here simply feels grand.</p>
+                            <p>It’s time to step into an exceptionally wonderful world of premium living, a world you
+                                truly deserve. Noida - TOWER A, offers only a limited 120 apartments. This
+                                thoughtfully planned project is majestic in every way, marking the first time that you
+                                will experience truly grand living.</p>
+                            <p>Elevate to a grand aspirational living, Life at Noida - TOWER A, never let's you wait for
+                                any goodness in life with the best of all the worlds. 3 high speed lifts ensure you
+                                reach your world of grandeur with ease.</p>
+                            <p>A community where you can belong, Fully occupied and operational society with 650
+                                families already residing. Life here at Noida(Tower A) makes you feel a part of a
+                                thriving community where you can live your dreams to the fullest.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="about-capital-image">
+                            <img src="https://i.pinimg.com/736x/25/0a/4e/250a4eaa84c843809f79484b4d03fa96.jpg"
+                                alt="The Alpha Tower" title="TheAlphaTower" class="w-100 img-thumbnail round-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- overview   -->
+
+
+    <section class="floor-plan g-s-p floor-plan-section" id="Floor-Plan">
+
+        <div class="container">
+            <div class="g-heading d-flex justify-content-between">
+                <div>
+                    <h1>Floor Plan</h1>
+                    <img src="images/line-img.png" class="line-img" alt="" title="">
+                </div>
+           
+            <div class="nav-controls">
+                <div class="btn-custom-nav btn-prev">
+                    <img src="images/left.png" alt="">
+                </div>
+                <div class="btn-custom-nav btn-next">
+                    <img src="images/icons8-arrow-64 (1).png" alt="">
+                </div>
+            </div>
+             </div>
+
+            <div class="swiper floorSwiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="plan-card-wrapper">
+                            <div class="plan-image-area img-thumbnail">
+                                <img src="https://i.pinimg.com/736x/b9/8b/70/b98b70fcaa15e4ecf9866eadc5f18a84.jpg"
+                                    alt="Plan 1">
+                            </div>
+                            <div class="plan-footer-label">3 Bed + 3 Toilet</div>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-slide">
+                        <div class="plan-card-wrapper">
+                            <div class="plan-image-area">
+                                <img src="https://i.pinimg.com/736x/a4/0b/a0/a40ba0ab38baac2c1c7915a32bc54cf6.jpg"
+                                    alt="Plan 2">
+                            </div>
+                            <div class="plan-footer-label">3 Bed + 3 Toilet</div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="plan-card-wrapper">
+                            <div class="plan-image-area">
+                                <img src="https://i.pinimg.com/1200x/7e/48/e2/7e48e26b5c8fd2165563b67dd614c551.jpg"
+                                    alt="Plan 3">
+                            </div>
+                            <div class="plan-footer-label">3 Bed + 3 Toilet</div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="plan-card-wrapper">
+                            <div class="plan-image-area">
+                                <img src="https://i.pinimg.com/1200x/0e/5b/07/0e5b076f713d627f0b0d1b0d46cab858.jpg"
+                                    alt="Plan 4">
+                            </div>
+                            <div class="plan-footer-label">3 Bed + 3 Toilet</div>
+                        </div>
+                    </div>
+                    <!-- 5 -->
+                    <div class="swiper-slide">
+                        <div class="plan-card-wrapper">
+                            <div class="plan-image-area">
+                                <img src="https://i.pinimg.com/1200x/3b/4b/59/3b4b59985fac5803b6a40d84bcd0f873.jpg"
+                                    alt="Plan 4">
+                            </div>
+                            <div class="plan-footer-label">3 Bed + 3 Toilet</div>
+                        </div>
+                    </div>
+                    <!-- 6 -->
+
+                </div>
+            </div>
+
+            <!-- <div class="nav-controls">
+                <div class="btn-custom-nav btn-prev">
+                    <img src="images/left.png" alt="">
+                </div>
+                <div class="btn-custom-nav btn-next">
+                    <img src="images/icons8-arrow-64 (1).png" alt="">
+                </div>
+            </div> -->
+
+
+        </div>
+
+    </section>
+
+
+    <!-- floor plan  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <script>
-        // Swiper Configuration
-        const swiper = new Swiper('.hero-bg-swiper', {
+        var swiper = new Swiper(".floorSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            grabCursor: true,
+            speed: 800,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".btn-next",
+                prevEl: ".btn-prev",
+            },
+            breakpoints: {
+                // When window width is >= 576px
+                576: {
+                    slidesPerView: 1,
+                },
+                // When window width is >= 768px
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                // When window width is >= 1024px
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+            },
+        });
+    </script>
+    <script>
+        var swiper = new Swiper('.hero-bg-swiper', {
             loop: true,
             effect: 'fade',
             speed: 1500,
-            autoplay: { delay: 5000, disableOnInteraction: false },
+            autoplay: { delay: 4000, disableOnInteraction: false },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
         });
 
-        // AOS Animation Configuration
         AOS.init({ once: true, mirror: false });
 
-        // Simple Form Submission Alert
         document.getElementById('leadForm').addEventListener('submit', (e) => {
             e.preventDefault();
             alert('Thank you for your interest! Our property expert will call you shortly.');
         });
     </script>
+
 </body>
 
 </html>
