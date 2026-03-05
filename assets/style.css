@@ -728,3 +728,7 @@ tbody, td, tfoot, th, thead, tr {
 .container-box {
     padding: 70px;
 } */
+
+#brochure img{
+    height: 450px !important;
+}
