@@ -17,7 +17,7 @@
 
         body {
             overflow-x: hidden;
-            background-color: #f4f4f4;
+            /* background-color: #f4f4f4; */
         }
 
         /* Navbar Styling */
@@ -764,3 +764,48 @@
         #brochure img {
             height: 450px !important;
         }
+
+iframe{
+
+}        
+@media (max-width: 991px) {
+    .fix-footer {
+        display: block !important;
+    }
+}
+
+.fix-footer {
+    height: 45px !important;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 5px 0;
+    z-index: 9;
+    box-shadow: rgb(204 219 232) 3px 3px 6px 0px inset, rgb(255 255 255 / 50%) -3px -3px 6px 1px inset;
+}
+.fix-footer p {
+    float: left;
+    width: 33.33%;
+    /* text-align: center; */
+    margin: 0;
+    padding: 0;
+    margin-top: 7px;
+}
+.fix-footer p a span {
+    float: left;
+    width: 100%;
+    color: #000;
+}
+
+.fix-footer p a img {
+    width: 20px;
+    margin: 0 4px;
+}
+footer {
+    background-color: #062625;
+    color: #fff;
+    padding: 1rem 1rem 3rem;
+}
