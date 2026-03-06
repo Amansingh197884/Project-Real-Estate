@@ -7,7 +7,7 @@
             --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             --transition-speed: 0.5s;
-                        --transition-speedd: 0.8s;
+                        --transitionn-speedd: 0.8s;
 
 
         }
@@ -977,7 +977,7 @@
        .banner-section .animate-text {
             opacity: 0;
             transform: translateY(30px);
-            transition: all var(--transition-speedd) ease-out;
+            transition: all var(--transitionn-speedd) ease-out;
         }
 
        .banner-section .swiper-slide-active .animate-text {

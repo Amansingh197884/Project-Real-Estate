@@ -1,0 +1,191 @@
+        :root {
+            --gold-color: #c5a059;
+            --green-color: #1b3d2f;
+            --transition-speed: 2000ms;
+        }
+
+        body {
+            font-family: 'Philosopher', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #000;
+        }
+
+        /* Main Banner Wrapper */
+         .banner-sectionn {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            background: #000;
+        }
+
+        /* 1. Background Slider Settings */
+        .banner-sectionn .mySwiperbann {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .banner-sectionn .slide-bg {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transform: scale(1.1);
+            transition: transform 6s ease;
+        }
+
+         .banner-sectionn .swiper-slide-active .slide-bg {
+            transform: scale(1);
+        }
+
+        .banner-sectionn .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 20%, rgba(0, 0, 0, 0.3) 100%);
+            z-index: 2;
+        }
+
+        /* 2. Static Content Layer (Text & Form) */
+        .banner-sectionn .static-content-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            pointer-events: none; /* Allows interaction with swiper underneath */
+        }
+
+        .banner-sectionn .hero-content {
+            width: 100%;
+            color: #fff;
+            pointer-events: auto; /* Re-enables clicks for buttons/inputs */
+        }
+
+        /* Amenities Styling */
+        .banner-sectionn .amenities-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .banner-sectionn .amenities-list li {
+            background: rgba(255, 255, 255, 0.12);
+            margin-bottom: 12px;
+            padding: 14px;
+            border-left: 5px solid var(--gold-color);
+            backdrop-filter: blur(10px);
+            border-radius: 0 10px 10px 0;
+            font-size: 1.15rem;
+            max-width: 580px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Form Styling */
+         .banner-sectionn .form-card {
+            background: var(--green-color);
+            padding: 35px;
+            border-radius: 15px 50px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        .banner-sectionn .form-card h3 {
+            color: var(--gold-color);
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .banner-sectionn .form-control {
+            height: 48px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 6px;
+            padding-left: 15px;
+        }
+
+        .banner-sectionn .captcha-box {
+            background: #fff;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .banner-sectionn .captcha-label {
+            padding: 0 15px;
+            color: #333;
+            font-weight: bold;
+            border-right: 1px solid #eee;
+            background: #f8f9fa;
+            height: 48px;
+            line-height: 48px;
+        }
+
+        .banner-sectionn .submit-btn {
+            background: var(--gold-color);
+            color: #000;
+            font-weight: 700;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .banner-sectionn .submit-btn:hover {
+            background: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 991px) {
+           .banner-sectionn {
+                height: auto;
+                min-height: 100vh;
+            }
+            .banner-sectionn .static-content-overlay {
+                position: relative;
+                padding: 100px 0 50px 0;
+                display: block;
+            }
+           .banner-sectionn  .mySwiperban {
+                position: fixed; /* Keep background fixed while scrolling content on mobile */
+            }
+            .banner-sectionn .hero-content h1, .hero-content p {
+                text-align: center !important;
+            }
+            .banner-sectionn .amenities-list li {
+                max-width: 100%;
+                font-size: 1rem;
+            }
+            .banner-sectionn .d-flex.gap-3 {
+                justify-content: center;
+            }
+        }
+
+        /* Swiper Pagination Style */
+        .banner-sectionn .swiper-pagination-bullet {
+            background: #fff !important;
+            opacity: 0.7;
+        }
+       .banner-sectionn .swiper-pagination-bullet-active {
+            background: #fff !important;
+            width: 25px;
+            border-radius: 5px;
+        }
